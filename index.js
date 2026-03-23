@@ -1,1 +1,19 @@
-console.log("PERN SETUP")
+// console.log("PERN SETUP")
+// import os from 'os'
+
+// console.log(os.platform())
+
+
+import http from 'http'
+
+
+const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' })
+    res.end("Hello Server   ")
+
+
+})
+
+server.listen(3000, () => {
+    console.log("Server is running on port http://localhost:3000")
+})
